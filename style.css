@@ -1,0 +1,417 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background Section */
+.body2 {
+  padding: 0 5%;
+  background-image: url("./img/2011_deus_ex_human_revolution-1920x1200.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 10vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: relative;
+}
+
+h1 a {
+  font-family: monospace;
+  color: white;
+  font-size: 1.5rem;
+}
+
+ul li a {
+  color: white;
+  font-family: arial;
+  font-size: 1rem;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.buy-now {
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 6px;
+  height: 2rem;
+  color: white;
+  width: 70px;
+  cursor: pointer;
+}
+
+/* Sections */
+#section-1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
+#section-2,
+#section-3 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+#section-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playing-now {
+  margin-left: 40px;
+}
+
+.sub-head {
+  font-size: 0.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+
+.menu-btn {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* only show on small screens */
+  background: transparent;
+  border: none;
+  padding: 6px;
+  margin-left: auto; 
+}
+
+/* nav default (desktop) */
+.nav-links {
+  display: block;
+}
+
+/* style the ul in nav so desktop stays inline */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* small screen behavior */
+@media (max-width: 768px) {
+
+  /* show the hamburger */
+  .menu-btn {
+    display: block;
+  }
+
+  /* hide the nav by collapsing height (smooth) */
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.32s ease, padding 0.32s ease;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-left: 1rem;
+  }
+
+  /* when active, expand */
+  .nav-links.active {
+    max-height: 400px; /* large enough for menu */
+    padding: 0.8rem 1rem 1rem 1rem;
+  }
+
+  /* stack items */
+  .nav-links ul {
+    display: block;
+  }
+
+  .nav-links ul li {
+    display: block;
+    padding: 0.7rem 0;
+  }
+
+  /* make the buy button look good in the stacked layout */
+  .nav-links .buy-now {
+    width: auto;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  /* smaller padding for header on mobile */
+  header {
+    padding: 0.8rem 1rem;
+    align-items: center;
+  }
+}
+
+
+
+
+.learn-more {
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 6px;
+  height: 2rem;
+  color: white;
+  width: 9rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+
+/* Hover effects */
+ul li a:hover {
+  border-bottom: 4px solid orange;
+}
+
+.buy-now:hover {
+  background: rgb(216, 10, 10);
+}
+
+.learn-more:hover {
+  background: red;
+}
+
+/* Images */
+#img img {
+  width: 100%;
+  max-width: 29rem;
+  height: auto;
+}
+
+#section div img {
+  height: auto;
+  max-height: 34vh;
+  margin: auto;
+  display: block;
+}
+
+/* Main content */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1rem 5%;
+  gap: 1rem;
+}
+
+#main div {
+  flex: 1 1 300px; /* responsive width */
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Section container */
+#section {
+  background: linear-gradient(135deg, #0A0F2B, #3D0B78, #00D4FF);
+  color: white;
+  padding: 3rem 5%;
+  margin-top: rem;
+}
+
+#section h3{
+  margin-top: 10px;
+  text-align: center;
+  color: #7b84a3;
+}
+
+
+footer {
+  background-color: #0A0F2B;
+  color: white;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+
+#top-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid grey;
+  flex-wrap: wrap; 
+}
+
+#text h3 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+#text p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#textarea input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+#textarea button {
+  border-radius: 6px;
+  background-color: black;
+  padding: 8px 20px;
+  color: white;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+#textarea p {
+  font-size: 12px;
+  color: gray;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+
+#second-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
+
+.explore li,
+.legal li {
+  margin-top: 15px;
+}
+
+.explore li a,
+.legal li a {
+  color: #8d8787;
+}
+
+.explore li a:hover,
+.legal li a:hover {
+  text-decoration: underline;
+}
+
+
+#social-links {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#social-links li {
+  display: inline-block;
+  padding: 10px;
+}
+
+#social-links li a {
+  color: white;
+}
+
+#social-links li a:hover {
+  text-decoration: underline;
+}
+
+
+#copyright {
+  color: #8d8787;
+  margin-top: 20px;
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+@media (max-width: 900px) {
+  footer {
+      padding: 50px 40px;
+  }
+  #top-div {
+      flex-direction: column;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  footer {
+      padding: 40px 20px;
+  }
+
+  #text h3 {
+      font-size: 18px;
+  }
+
+  #second-div {
+      flex-direction: column;
+      text-align: left;
+  }
+
+  #social-links li {
+      padding: 6px 12px;
+  }
+}
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul li {
+    padding: 0.3rem 0.5rem;
+  }
+  #section {
+    padding: 2rem 3%;
+    border-radius: 2rem 2rem 0 0;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  .body2 {
+    padding: 0 2%;
+  }
+  header {
+    padding: 1rem 2%;
+  }
+  h1 a {
+    font-size: 1.2rem;
+  }
+  ul li {
+    display: block;
+    padding: 0.3rem 0;
+  }
+  #section-1 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  #main {
+    flex-direction: column;
+    padding: 1rem 2%;
+  }
+}
